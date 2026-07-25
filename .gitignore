@@ -6,6 +6,8 @@ __pycache__/
 # C extensions
 *.so
 
+transformer_model.pth
+
 # Distribution / packaging
 .Python
 build/
