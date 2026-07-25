@@ -9,15 +9,16 @@ Built strictly from scratch using core PyTorch primitives without relying on hig
 ## Key Features
 
 * **Custom Byte-Pair Encoding (BPE):** Implemented an in-memory BPE tokenizer handling raw UTF-8 byte mappings and special control tokens (`<PAD>`, `<SOS>`, `<EOS>`, `<UNK>`).
-* **Multi-Head Attention (MHA):** Parallelized Scaled Dot-Product Attention projecting Query, Key, and Value representations across $h=8$ heads ($d_k = 64$).
-* **Positional Encodings:** Static sinusoidal wave functions injected into $d_{\text{model}} = 512$ embedding spaces to provide spatial order context without recurrent operations.
-* **Add & Norm Sublayers:** Layer Normalization built from scratch with learnable scale ($\gamma$) and shift ($\beta$) parameters, wrapped around residual connections.
+* **Multi-Head Attention (MHA):** Parallelized Scaled Dot-Product Attention projecting Query, Key, and Value representations across $h=8$ heads (d_k = 64).
+* **Positional Encodings:** Static sinusoidal wave functions injected into d_model = 512 embedding spaces to provide spatial order context without recurrent operations.
+* **Add & Norm Sublayers:** Layer Normalization built from scratch with learnable scale (gamma) and shift (beta) parameters, wrapped around residual connections.
 * **Masking Pipeline:** Integrated target causal masking (lower-triangular boolean matrices) to prevent future-token information leakage during autoregressive decoding, alongside source padding masks.
 
 ---
 
 ## Repository Structure
 
+```text
 transformer_from_scratch/
 │
 ├── tokenizer.py        # BPE Tokenizer class & special token handling
