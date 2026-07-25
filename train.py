@@ -47,7 +47,7 @@ def train_model():
     tgt_input = torch.tensor([tokenizer.pad_sequence(tgt_tokens[:-1], 12)], dtype=torch.long)
     tgt_label = torch.tensor([tokenizer.pad_sequence(tgt_tokens[1:], 12)], dtype=torch.long)
 
-    epochs = 120
+    epochs = 400
     for epoch in range(epochs):
         optimizer.zero_grad()
 
