@@ -2,7 +2,7 @@
 
 A modular, lightweight implementation of the original Sequence-to-Sequence Transformer architecture as introduced in Vaswani et al. (2017), *"Attention Is All You Need"*. 
 
-Built strictly from scratch using core PyTorch primitives without relying on high-level `torch.nn.Transformer` or pre-built library modules. Includes a custom Byte-Pair Encoding (BPE) tokenizer, causal and padding masking pipelines, and an interactive Gradio web interface.
+Built strictly from scratch using core PyTorch primitives without relying on high-level `torch.nn.Transformer` or pre-built library modules. Includes a custom Byte-Pair Encoding (BPE) tokenizer and causal and padding masking pipelines.
 
 ---
 
